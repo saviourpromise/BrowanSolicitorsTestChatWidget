@@ -5,7 +5,7 @@ import { MessageSquare, X, Send } from "lucide-react";
 const BRIDGE_URL = "https://browanchat.easyappz.com/chat";
 const AGENT_NAME = "Browan Solicitors Assistant";
 const GREETING =
-    "Hello! Welcome to Browan Solicitors! 👋 I'm Babs, your AI assistant. How can I help you today?";
+    "Hello! Welcome to Browan Solicitors!👋. I'm Babs, your virtual receptionist. I can help with information about our Family Law, Immigration Law and Civil Litigation services. How can I assist you today?";
 
 const BOT_AVATAR =
     "https://www.shutterstock.com/image-vector/happy-robot-3d-ai-character-600nw-2464455965.jpg";
@@ -273,6 +273,13 @@ export function ChatWidget() {
                     <div ref={messagesEndRef} />
                 </div>
 
+                {/* ── Disclaimer ── */}
+                <div id="cm-chat-disclaimer" className="px-4 py-2 bg-white border-t border-gray-100 text-center">
+                    <div className="text-[11px] text-gray-400 leading-relaxed">
+                        ⚖️ This assistant provides general information only and does not constitute legal advice.
+                    </div>
+                </div>
+
                 {/* ── Input area ── */}
                 <div className="px-4 py-3.5 bg-white border-t border-gold/10 flex gap-2.5 items-end shrink-0">
                     <textarea
@@ -299,12 +306,12 @@ export function ChatWidget() {
                 <div className="text-center py-2 bg-white text-[10px] uppercase tracking-wider text-gray-400 border-t border-gray-100">
                     Powered by{" "}
                     <a
-                        href="https://trostechnologies.com"
+                        href="https://optimizewithai.net/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gold/80 font-medium no-underline hover:text-gold transition-colors"
                     >
-                        Tros Technologies
+                        OptimizewithAI
                     </a>
                 </div>
             </div>
